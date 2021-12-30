@@ -23,3 +23,5 @@ router.post("/", async (req, res) => {
   await todo.save();
   res.send(todo);
 });
+
+module.exports = router;
