@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
   let todo = new Todo({
     title,
-    notr,
+    note,
     tag,
     oneTime,
     dateChosen,

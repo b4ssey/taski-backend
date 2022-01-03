@@ -29,11 +29,18 @@ const Todo = mongoose.model(
       type: Date,
       required: true,
     },
+    owner: {
+      type: new mongoose.Schema({
+        name: { type: String, required: true, minlength: 5, maxlength: 50 },
+      }),
+      required: true,
+    },
   })
 );
 
-function validateTodo({ ttl, nt, tg, ntm, dt }) {
+function validateTodo(oID, ttl, nt, tg, ntm, dt) {
   const schema = Joi.object({
+    owner: Joi.objectId().required(),
     title: Joi.string().min(5).max(25).required(),
     note: Joi.string().min(25).max(50).required(),
     tag: Joi.string().valid("urgent", "high", "normal", "low"),
@@ -41,6 +48,7 @@ function validateTodo({ ttl, nt, tg, ntm, dt }) {
     dateChosen: Joi.date().required(),
   });
   return schema.validate({
+    owner: oID,
     title: ttl,
     note: nt,
     tag: tg,
