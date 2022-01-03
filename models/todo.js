@@ -38,14 +38,14 @@ const Todo = mongoose.model(
   })
 );
 
-function validateTodo(oID, ttl, nt, tg, ntm, dt) {
+function validateTodo(ttl, nt, tg, ntm, dt, oID) {
   const schema = Joi.object({
-    owner: Joi.objectId().required(),
     title: Joi.string().min(5).max(25).required(),
     note: Joi.string().min(25).max(50).required(),
     tag: Joi.string().valid("urgent", "high", "normal", "low"),
     oneTime: Joi.boolean().required(),
     dateChosen: Joi.date().required(),
+    owner: Joi.objectId(),
   });
   return schema.validate({
     owner: oID,
