@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const _ = require("lodash");
+const nodemailer = require("../startup/nodemailer");
 const { User, validate } = require("../models/user");
 const express = require("express");
 const router = express.Router();
@@ -33,15 +34,39 @@ router.post("/", async (req, res) => {
 
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
-  user.confirmationCode = await confirmationToken;
 
-  await user.save();
+  await user.save((err) => {
+    if (err) {
+      res.status(500).send({ message: err });
+      return;
+    }
+    res.send({
+      message: "User was registered successfully! Please check your email",
+    });
+
+    nodemailer.sendConfirmationEmail(
+      user.username,
+      user.email,
+      user.confirmationCode
+    );
+  });
 
   const token = user.generateAuthToken();
 
   res
     .header("x-auth-token", token)
     .send(_.pick(user, ["_id", "name", "email"]));
+});
+
+router.post("/confirm/:confirmationCode", async (req, res) => {
+  let user = await User.findOne({
+    confirmationCode: req.params.confirmationCode,
+  });
+
+  if (!user) return res.status(404).send("User Not found.");
+
+  user.status = "Active";
+  await user.save();
 });
 
 module.exports = router;
