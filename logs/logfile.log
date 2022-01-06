@@ -78,3 +78,72 @@
 {"level":"info","message":"Connected to mongodb://localhost/taski..."}
 {"level":"info","message":"Listening on port 3000"}
 {"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"error","message":"config is not defined config is not defined","stack":"ReferenceError: config is not defined\n    at C:\\Projects\\Personal\\Todo\\taski-back\\routes\\users.js:23:5\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"code":11000,"index":0,"keyPattern":{"confirmationCode":1},"keyValue":{"confirmationCode":null},"level":"error","message":"E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null } E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null }","stack":"MongoServerError: E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null }\n    at C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\operations\\insert.js:51:33\n    at C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js:272:25\n    at handleOperationResult (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\sdam\\server.js:370:9)\n    at MessageStream.messageHandler (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\connection.js:479:9)\n    at MessageStream.emit (events.js:400:28)\n    at processIncomingData (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:108:16)\n    at MessageStream._write (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:28:9)\n    at writeOrBuffer (internal/streams/writable.js:358:12)\n    at MessageStream.Writable.write (internal/streams/writable.js:303:10)\n    at Socket.ondata (internal/streams/readable.js:731:22)"}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"code":11000,"index":0,"keyPattern":{"confirmationCode":1},"keyValue":{"confirmationCode":null},"level":"error","message":"E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null } E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null }","stack":"MongoServerError: E11000 duplicate key error collection: taski.users index: confirmationCode_1 dup key: { confirmationCode: null }\n    at C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\operations\\insert.js:51:33\n    at C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js:272:25\n    at handleOperationResult (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\sdam\\server.js:370:9)\n    at MessageStream.messageHandler (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\connection.js:479:9)\n    at MessageStream.emit (events.js:400:28)\n    at processIncomingData (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:108:16)\n    at MessageStream._write (C:\\Projects\\Personal\\Todo\\taski-back\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:28:9)\n    at writeOrBuffer (internal/streams/writable.js:358:12)\n    at MessageStream.Writable.write (internal/streams/writable.js:303:10)\n    at Socket.ondata (internal/streams/readable.js:731:22)"}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}

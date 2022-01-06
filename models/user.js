@@ -23,8 +23,17 @@ const userSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 1024,
   },
-  isAdmin: Boolean,
-  isVerified: { type: Boolean, default: false },
+  status: {
+    type: String,
+    enum: ["Pending", "Active"],
+    default: "Pending",
+  },
+  confirmationCode: {
+    type: String,
+    unique: true,
+  },
+  // isAdmin: Boolean,
+  // isVerified: { type: Boolean, default: false },
 });
 
 userSchema.methods.generateAuthToken = function () {

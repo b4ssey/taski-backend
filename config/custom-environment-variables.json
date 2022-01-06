@@ -1,3 +1,4 @@
 {
-  "jwtPrivateKey": "taski_jwtPrivateKey"
+  "jwtPrivateKey": "taski_jwtPrivateKey",
+  "pass": "taski_pass"
 }

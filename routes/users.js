@@ -1,5 +1,7 @@
 const auth = require("../middleware/auth");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const config = require("config");
 const _ = require("lodash");
 const { User, validate } = require("../models/user");
 const express = require("express");
@@ -11,16 +13,27 @@ router.get("/me", auth, async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { error } = validate(req.body.name, req.body.email, req.body.password);
+  const { name, email, password } = req.body;
+  const { error } = validate(name, email, password);
   if (error) return res.status(400).send(error.details[0].message);
 
-  let user = await User.findOne({ email: req.body.email });
+  let user = await User.findOne({ email: email });
   if (user) return res.status(400).send("User already registered.");
 
-  user = new User(_.pick(req.body, ["name", "email", "password"]));
+  const confirmationToken = jwt.sign({ email }, config.get("jwtPrivateKey"));
+  console.log("this na conformation token", confirmationToken);
+
+  // user = new User(_.pick(req.body, ["name", "email", "password"]));
+  user = new User({
+    name,
+    email,
+    password,
+    confirmationCode: confirmationToken,
+  });
 
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
+  user.confirmationCode = await confirmationToken;
 
   await user.save();
 
