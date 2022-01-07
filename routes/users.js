@@ -22,7 +22,6 @@ router.post("/", async (req, res) => {
   if (user) return res.status(400).send("User already registered.");
 
   const confirmationToken = jwt.sign({ email }, config.get("jwtPrivateKey"));
-  console.log("this na conformation token", confirmationToken);
 
   // user = new User(_.pick(req.body, ["name", "email", "password"]));
   user = new User({
@@ -35,30 +34,18 @@ router.post("/", async (req, res) => {
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
 
-  await user.save((err) => {
-    if (err) {
-      res.status(500).send({ message: err });
-      return;
-    }
-    res.send({
-      message: "User was registered successfully! Please check your email",
-    });
+  await user.save();
 
-    nodemailer.sendConfirmationEmail(
-      user.username,
-      user.email,
-      user.confirmationCode
-    );
-  });
+  res.send("User was registered successfully! Please check your email");
 
-  const token = user.generateAuthToken();
-
-  res
-    .header("x-auth-token", token)
-    .send(_.pick(user, ["_id", "name", "email"]));
+  nodemailer.sendConfirmationEmail(
+    user.name,
+    user.email,
+    user.confirmationCode
+  );
 });
 
-router.post("/confirm/:confirmationCode", async (req, res) => {
+router.get("/confirm/:confirmationCode", async (req, res) => {
   let user = await User.findOne({
     confirmationCode: req.params.confirmationCode,
   });
@@ -66,7 +53,14 @@ router.post("/confirm/:confirmationCode", async (req, res) => {
   if (!user) return res.status(404).send("User Not found.");
 
   user.status = "Active";
+
   await user.save();
+
+  const token = user.generateAuthToken();
+
+  res
+    .header("x-auth-token", token)
+    .send(_.pick(user, ["_id", "name", "email"]));
 });
 
 module.exports = router;

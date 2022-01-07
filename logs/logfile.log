@@ -175,3 +175,39 @@
 {"level":"info","message":"Connected to mongodb://localhost/taski..."}
 {"level":"info","message":"Listening on port 3000"}
 {"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"error","message":"user is not defined user is not defined","stack":"ReferenceError: user is not defined\n    at Object.module.exports.sendConfirmationEmail (C:\\Projects\\Personal\\Todo\\taski-back\\startup\\nodemailer.js:17:13)\n    at C:\\Projects\\Personal\\Todo\\taski-back\\routes\\users.js:42:14\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"}
+{"level":"error","message":"user is not defined user is not defined","stack":"ReferenceError: user is not defined\n    at Object.module.exports.sendConfirmationEmail (C:\\Projects\\Personal\\Todo\\taski-back\\startup\\nodemailer.js:17:13)\n    at C:\\Projects\\Personal\\Todo\\taski-back\\routes\\users.js:42:14\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}
+{"level":"info","message":"Listening on port 3000"}
+{"level":"info","message":"Connected to mongodb://localhost/taski..."}

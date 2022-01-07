@@ -9,18 +9,18 @@ const transport = nodemailer.createTransport({
   },
 });
 
-module.exports.sendConfirmationEmail = (name, email, conformationCode) => {
+module.exports.sendConfirmationEmail = (name, email, confirmationCode) => {
   console.log("Sending confirmation code.....");
 
   transport
     .sendMail({
-      from: user,
+      from: config.get("user"),
       to: email,
       subject: "Confirm your Taski account",
       html: `<h1>Email Confirmation</h1>
     <h2>Hello ${name}</h2>
     <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
-    <a href=http://localhost:3000/confirm/${confirmationCode}> Click here</a>
+    <a href=http://localhost:3000/api/users/confirm/${confirmationCode}> Click here</a>
     </div>`,
     })
     .catch((err) => console.log(err));
