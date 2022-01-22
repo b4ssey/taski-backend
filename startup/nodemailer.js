@@ -25,3 +25,12 @@ module.exports.sendConfirmationEmail = (name, email, confirmationCode) => {
     })
     .catch((err) => console.log(err));
 };
+
+module.exports.sendFeedback = (name, comment) => {
+  transport.sendMail({
+    from: config.get("user"),
+    to: config.get("user"),
+    subject: `Feedback from ${name}`,
+    html: `<div><p>${comment}</p></div>`,
+  });
+};
