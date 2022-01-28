@@ -1,9 +1,21 @@
 {
+  "name": "taski-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "14.18.0"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
+    "helmet": "^5.0.2",
     "joi": "^17.5.0",
     "joi-objectid": "^4.0.2",
     "joi-password-complexity": "^5.1.0",
