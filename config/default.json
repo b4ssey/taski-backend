@@ -2,5 +2,5 @@
   "jwtPrivateKey": "",
   "user": "taskiapphandler@gmail.com",
   "pass": "",
-  "db": "mongodb://localhost/taski"
+  "db": ""
 }
