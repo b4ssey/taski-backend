@@ -36,9 +36,7 @@ router.post("/", async (req, res) => {
 
   await user.save();
 
-  res
-    .status(200)
-    .send("User was registered successfully! Please check your email");
+  res.send("User was registered successfully!");
 
   nodemailer.sendConfirmationEmail(
     user.name,
