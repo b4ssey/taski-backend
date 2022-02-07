@@ -32,8 +32,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
-  // isAdmin: Boolean,
-  // isVerified: { type: Boolean, default: false },
+  isAdmin: Boolean,
 });
 
 userSchema.methods.generateAuthToken = function () {
