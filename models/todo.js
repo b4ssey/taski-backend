@@ -57,5 +57,11 @@ function validateTodo(ttl, nt, tg, ntm, dt, oID) {
   });
 }
 
+function validateUser(oID) {
+  const schema = Joi.object({ owner: Joi.objectId() });
+  return schema.validate({ owner: oID });
+}
+
 exports.Todo = Todo;
 exports.validate = validateTodo;
+exports.validateUser = validateUser;
