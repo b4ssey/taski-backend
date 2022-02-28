@@ -18,7 +18,7 @@ router.get("/:owner", auth, async (req, res) => {
   const user = await User.findById(owner);
   if (!user) return res.status(400).send("Invalid user.");
 
-  const todos = await Todo.findById(user).select("-dateChosen");
+  const todos = await Todo.find({ "owner._id": user }).select("-dateChosen");
   res.send(todos);
 });
 
