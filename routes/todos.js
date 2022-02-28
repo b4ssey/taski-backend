@@ -10,7 +10,7 @@ router.get("/", auth, async (req, res) => {
   res.send(todos);
 });
 
-router.get("/mytodos/:owner", auth, async (req, res) => {
+router.get("/:owner", auth, async (req, res) => {
   let { owner } = req.params;
   const { error } = validateUser(owner);
   if (error) return res.status(400).send(error.details[0].message);
