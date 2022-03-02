@@ -80,7 +80,7 @@ router.delete("/:uId/:tId", auth, async (req, res) => {
   const { error: todoErr } = validateUser(tId);
   if (todoErr) return res.status(400).send(error.details[0].message);
 
-  const todo = await Customer.findByIdAndRemove(tId);
+  const todo = await Todo.findByIdAndRemove(tId);
   if (!todo) return res.status(400).send("Invalid todo.");
 
   res.send(todo);
