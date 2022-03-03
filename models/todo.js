@@ -7,20 +7,18 @@ const Todo = mongoose.model(
     title: {
       type: String,
       required: true,
-      minlength: 5,
+      minlength: 3,
       maxlength: 25,
     },
     note: {
       type: String,
       required: true,
-      minlength: 25,
+      minlength: 5,
       maxlength: 50,
     },
     tag: {
       type: String,
       enum: ["urgent", "high", "normal", "low"],
-      minlength: 4,
-      maxlength: 10,
     },
     oneTime: {
       type: Boolean,
@@ -40,7 +38,7 @@ const Todo = mongoose.model(
 
 function validateTodo(ttl, nt, tg, ntm, dt, oID) {
   const schema = Joi.object({
-    title: Joi.string().min(5).max(25).required(),
+    title: Joi.string().min(3).max(25).required(),
     note: Joi.string().min(5).max(50).required(),
     tag: Joi.string().valid("urgent", "high", "normal", "low"),
     oneTime: Joi.boolean(),
