@@ -7,9 +7,9 @@ const transport = nodemailer.createTransport({
     type: "OAuth2",
     user: config.get("user"),
     pass: config.get("pass"),
-    clientId: config.get("OAUTH_CLIENTID"),
-    clientSecret: config.get("OAUTH_CLIENT_SECRET"),
-    refreshToken: config.get("OAUTH_REFRESH_TOKEN"),
+    clientId: config.get("clientId"),
+    clientSecret: config.get("clientSecret"),
+    refreshToken: config.get("refreshToken"),
   },
 });
 

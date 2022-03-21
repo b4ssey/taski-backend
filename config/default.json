@@ -3,7 +3,7 @@
   "user": "taskiapphandler@gmail.com",
   "pass": "",
   "db": "",
-  "clientId": "326628123823-1d7r2047kgs47ab9p172kqdvhaetas79.apps.googleusercontent.com",
-  "clientSecret": "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",
-  "refreshToken": "1//04FZJv_-KPpsZCgYIARAAGAQSNwF-L9Ir_hXA-Ye5pNeZsA5M-Jm5MSN4RhWqasyNZWC_UkCG-ThAgqA5laJVhXLDADLjilsPQa0"
+  "clientId": "",
+  "clientSecret": "",
+  "refreshToken": ""
 }
