@@ -1,5 +1,8 @@
 {
   "jwtPrivateKey": "taski_jwtPrivateKey",
   "pass": "taski_pass",
-  "db": "taski_db"
+  "db": "taski_db",
+  "clientId": "taski_clientId",
+  "clientSecret": "taski_clientSecret",
+  "refreshToken": "taski_refreshToken"
 }
